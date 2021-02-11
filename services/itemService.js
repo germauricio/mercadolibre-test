@@ -19,7 +19,7 @@ export const getItem = (productId) =>
     new Promise((resolve, reject) => {
     axios.get(`/api/items/${productId}`)
         .then((res) => {
-            resolve(res.data);
+            resolve(res.data.item);
         })
         .catch(err => {
             if (err.response && err.response.data && err.response.data.message) {

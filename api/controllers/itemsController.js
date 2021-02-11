@@ -74,5 +74,5 @@ exports.show = async (req, res) => {
     }
   }
 
-  res.json(response)  
+  res.json(response);
 }

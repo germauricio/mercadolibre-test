@@ -1,8 +1,10 @@
 import React, {useState, useEffect, useContext} from 'react';
+import ProductDetail from '../../components/ProductDetail';
 import {useRouter} from 'next/router';
 import {getItem} from '../../services/itemService';
+import SearchBox from '../../components/SearchBox';
 
-const ProductDetail = () => {
+const ProductView = () => {
     const router = useRouter()
     const [item, setItem] = useState('');
     
@@ -18,8 +20,11 @@ const ProductDetail = () => {
     }, [router.query.productId]);
 
     return (
-        <div>{router.query.productId}</div>
+        <div>
+            <SearchBox/>
+            <ProductDetail item={item}/>
+        </div>
     )
 }
 
-export default ProductDetail;
+export default ProductView;
