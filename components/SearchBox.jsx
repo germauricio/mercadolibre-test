@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import {useRouter} from 'next/router';
 import styles from '../styles/Home.module.css';
 
-const SearchBox = () => {
-    const [search, setSearch] = useState('');
-
+const SearchBox = ({value}) => {
     const router = useRouter();
+    const [search, setSearch] = useState(value);
+
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -15,8 +15,8 @@ const SearchBox = () => {
     return (
         <div className={styles.container}>
             <form onSubmit={handleSubmit}>
-                <input onChange = {(event) => setSearch(event.target.value)} type="text"></input>
-                <button type="submit"></button>
+                <input value={search} onChange = {(event) => setSearch(event.target.value)} type="text"></input>
+                <button type="submit">Buscar</button>
             </form>
         </div>
     );

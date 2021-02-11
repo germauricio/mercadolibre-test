@@ -20,17 +20,17 @@ const SearchResult = () => {
     }, [router.query.search]);
 
     return (
-        items && (
+        <div>
+        <SearchBox value={router.query.search}/>
+        {items && (
             items.map( (item) => {
                 return(
-                    <div>
-                        <SearchBox/>
-                        <ProductMiniature item={item}></ProductMiniature>
-                    </div>
-                )
-            })
+                    <ProductMiniature item={item}/>
+                    )
+                })
+        )}
+        </div>
         )
-    )
 }
 
 export default SearchResult;
