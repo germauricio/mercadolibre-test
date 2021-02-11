@@ -9,6 +9,7 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "next": "10.0.6",
     "react": "17.0.1",

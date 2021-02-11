@@ -3,6 +3,7 @@ const express = require('express');
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev });
 const handle = app.getRequestHandler();
+const loaders = require('./api/loaders');
 
 app.prepare().then(() => {
   const server = express();
