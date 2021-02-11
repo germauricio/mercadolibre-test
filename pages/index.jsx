@@ -7,11 +7,11 @@ export default function SearchBox() {
 
   const [search, setSearch] = useState('');
 
+  const router = useRouter();
+
   const handleSubmit = async (event) => {
       event.preventDefault();
-      console.log(search)
-      const items = await getItems(search);
-      console.log(items)
+      router.push('/items?search=' + search);
   }
   return (
     <div className={styles.container}>
