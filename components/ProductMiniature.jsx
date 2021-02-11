@@ -10,8 +10,8 @@ const ProductMiniature = ({ item }) => {
 
     return (
         <div onClick={handleOnClick}>
-            <img height='100px' src={item.thumbnail}></img>
-            <p>$ {item.price}</p>
+            <img height='100px' src={item.picture}></img>
+            <p>$ {item.price.decimals}</p>
             <p>{item.title}</p>
         </div>
     )

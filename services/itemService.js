@@ -2,9 +2,9 @@ import axios from '../lib/axios.js';
 
 export const getItems = (query) => 
     new Promise((resolve, reject) => {
-    axios.post(`/api/items/${query}`)
+    axios.get(`/api/items?q=${query}`)
         .then((res) => {
-            resolve(res.data.results);
+            resolve(res.data.items);
         })
         .catch(err => {
             if (err.response && err.response.data && err.response.data.message) {
@@ -17,7 +17,7 @@ export const getItems = (query) =>
 
 export const getItem = (productId) => 
     new Promise((resolve, reject) => {
-    axios.post(`/api/items/id/${productId}`)
+    axios.get(`/api/items/${productId}`)
         .then((res) => {
             resolve(res.data);
         })
