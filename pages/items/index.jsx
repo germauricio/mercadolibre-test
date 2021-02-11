@@ -1,25 +1,33 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useRouter} from 'next/router'
-import { getItems } from "../../services/itemService";
+import { getItems } from '../../services/itemService';
+import ProductMiniature from '../../components/ProductMiniature';
+import SearchBox from '../../components/SearchBox';
 
 const SearchResult = () => {
     const router = useRouter()
     const [items, setItems] = useState([]);
+
     useEffect(() => {
         (async () => {
-            console.log(router.query)
             if(router.query.search){
                 getItems(router.query.search)
                     .then((res) => {
-                    setItems(res)
-                    console.log(res)
+                        setItems(res);
                     });
             }
         })()
     }, [router.query.search]);
 
     return (
-        <div>{router.query.productId}</div>
+        items && (
+            items.map( (item) => {
+                return(
+                    <SearchBox/>
+                    <ProductMiniature item={item}></ProductMiniature>
+                )
+            })
+        )
     )
 }
 

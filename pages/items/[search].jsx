@@ -7,7 +7,6 @@ const ProductDetail = () => {
     useEffect(() => {
         (async () => {
             if(router.query.productId){
-                console.log(router.query)
             }
         })()
     }, [router.query.productId]);
