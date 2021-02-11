@@ -23,8 +23,10 @@ const SearchResult = () => {
         items && (
             items.map( (item) => {
                 return(
-                    <SearchBox/>
-                    <ProductMiniature item={item}></ProductMiniature>
+                    <div>
+                        <SearchBox/>
+                        <ProductMiniature item={item}></ProductMiniature>
+                    </div>
                 )
             })
         )
