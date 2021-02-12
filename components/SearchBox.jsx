@@ -9,7 +9,9 @@ const SearchBox = ({value}) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        router.push('/items?search=' + search);
+        if(search){
+            router.push('/items?search=' + search);
+        }
     }
 
     const handleClick = async () => {

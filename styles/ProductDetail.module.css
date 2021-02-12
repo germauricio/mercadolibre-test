@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+}
+
+.leftColumn {
+    width: 60%;
+    position: relative;
+    text-align: center;
+    padding-top: 6rem;
+}
+   
+.rightColumn {
+    width: 40%;
+    margin-top: 60px;
+    font-family: 'Lato', sans-serif;
+}
+
+.button {
+    padding-top:3rem;
+}
+
+.button button {
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: rgb(103, 138, 250);
+    height: 4rem;
+    width: 15rem;
+    transition: background 0.2s ease-in;
+}
+
+.button button:hover {
+    background: rgb(71, 106, 220);
+}
+
+.leftColumn img {
+    height:100%;
+}
+
+.description {
+    width:60%;
+    margin: 10rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.description p {
+    white-space: pre-line;
+}
+
+@media (max-width: 940px) {
+    .container {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+
+    .description {
+        all: unset;
+    }
+
+    .description p {
+        margin:3rem;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .description h3 {
+        margin:3rem;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .leftColumn,
+    .rightColumn {
+      width: 100%;
+    }
+   
+    .leftColumn img {
+      right: 0;
+      top: -65px;
+      width: 220px;
+      left: initial;
+    }
+    .button{
+        text-align: center;
+    }
+    .button button {
+        color: rgb(255, 255, 255);
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        background: rgb(103, 138, 250);
+        height: 4rem;
+        width: 70%;
+        transition: background 0.2s ease-in;
+    }
+  }
+   
+  @media (max-width: 535px) {
+    .leftColumn img {
+      width: 220px;
+      top: -85px;
+    }
+  }

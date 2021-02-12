@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+
 .product {
     display: flex;
     padding-left: 1.5rem;
@@ -11,7 +13,8 @@
     order: 0;
 }
 
-.productDesc { 
+.productDesc {
+    font-family: 'Lato', sans-serif; 
     order: 1;
     padding-left: 2rem;
  }
