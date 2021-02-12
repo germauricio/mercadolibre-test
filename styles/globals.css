@@ -14,3 +14,21 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.loading{
+  padding-top: 4em;
+  padding-bottom: 4em;
+  top:50%;
+}
+
+.container {
+  text-align: center;
+  padding-top:15%;
+}
+
+@media (max-width: 535px) {
+  .container {
+    text-align: center;
+    padding-top:50%;
+  }
+}

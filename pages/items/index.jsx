@@ -6,7 +6,7 @@ import SearchBox from '../../components/SearchBox';
 
 const SearchResult = () => {
     const router = useRouter()
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState(null);
 
     useEffect(() => {
         (async () => {
@@ -22,12 +22,16 @@ const SearchResult = () => {
     return (
         <div>
         <SearchBox value={router.query.search}/>
-        {items && (
+        {items ? (
             items.map( (item) => {
                 return(
                     <ProductMiniature item={item}/>
                     )
                 })
+        ) : (
+            <div className="container">
+                <img src="/loading.gif" height="200px" className="loading" alt="loading"/>
+            </div>
         )}
         </div>
         )

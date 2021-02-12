@@ -2,7 +2,9 @@ import axios from '../lib/axios.js';
 
 export const getItems = (query) => 
     new Promise((resolve, reject) => {
-    axios.get(`/api/items?q=${query}`)
+    let search = query.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    axios.get(`/api/items?q=${search}`)
         .then((res) => {
             resolve(res.data.items);
         })

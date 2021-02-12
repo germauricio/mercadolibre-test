@@ -22,8 +22,12 @@ const ProductView = () => {
     return (
         <div>
             <SearchBox/>
-            {item && (
+            {item ? (
                 <ProductDetail item={item}/>
+            ) : (
+                <div className="container">
+                    <img src="/loading.gif" height="200px" className="loading" alt="loading"/>
+                </div>
             )}
         </div>
     )
