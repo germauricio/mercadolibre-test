@@ -80,7 +80,6 @@
    
     .leftColumn img {
       right: 0;
-      top: -65px;
       width: 220px;
       left: initial;
     }
@@ -102,6 +101,5 @@
   @media (max-width: 535px) {
     .leftColumn img {
       width: 220px;
-      top: -85px;
     }
   }
