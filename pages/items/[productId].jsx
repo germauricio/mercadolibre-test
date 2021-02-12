@@ -22,7 +22,9 @@ const ProductView = () => {
     return (
         <div>
             <SearchBox/>
-            <ProductDetail item={item}/>
+            {item && (
+                <ProductDetail item={item}/>
+            )}
         </div>
     )
 }
