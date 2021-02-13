@@ -9,22 +9,24 @@ exports.index = (req, res) => {
         .then(resp => {
           let items = [];
           let categories = [];
-          resp.data.results.forEach((result) => {
-            categories.push(result.category_id);
-            items.push({
-              id: result.id,
-              title: result.title,
-              price: { 
-                currency: result.currency_id, 
-                amount: result.price, 
-                decimals: result.price,
+          resp.data.results.forEach((result, index) => {
+            if(index < 4){
+              categories.push(result.category_id);
+              items.push({
+                id: result.id,
+                title: result.title,
+                price: { 
+                  currency: result.currency_id, 
+                  amount: result.price, 
+                  decimals: result.price,
                 },
-              picture: result.thumbnail, 
-              condition: result.condition, 
-              free_shipping: result.shipping.free_shipping, 
-            })
-          });
-          
+                picture: result.thumbnail, 
+                condition: result.condition, 
+                free_shipping: result.shipping.free_shipping, 
+              })
+            }
+            });
+            
           const response = {
             author: {
               name: 'Mauricio',
