@@ -3,7 +3,7 @@ const axios = require('axios');
 exports.index = (req, res) => {
     const search = req.query.q;
     axios({
-        url: `${process.env.API_MELI}/sites/MLA/search?q=` + search + 'limit=',
+        url: `${process.env.API_MELI}/sites/MLA/search?q=` + search,
         method: 'get',
       })
         .then(resp => {
