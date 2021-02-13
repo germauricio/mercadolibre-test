@@ -14,7 +14,7 @@ const ProductMiniature = ({ item }) => {
             <img className={styles.productImage} height='auto' width='100px' src={item.picture}></img>
             <div className={styles.productDesc}>
                 <p>{item.title}</p>
-                <h4>$ {item.price.decimals}</h4>
+                <span className={styles.amount}>$ {item.price.amount}</span>
             </div>
         </div>
     )

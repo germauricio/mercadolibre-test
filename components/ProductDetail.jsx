@@ -11,7 +11,12 @@ const ProductDetail = ({ item }) => {
                 <div className={styles.rightColumn}>
                     <p>{item.condition == 'new' ? 'Nuevo':'Usado'} - {item.sold_quantity} vendidos </p>
                     <h1>{item.title}</h1>
-                    <h2 className="pt-4">$ {item.price.decimals}</h2>
+                    <div className={styles.price}>
+                        <span className="priceAmount">$ {item.price.amount}</span>
+                        {item.price.decimals !== 0 && (
+                            <span className={styles.priceDecimals}>{item.price.decimals}</span>
+                        )}
+                    </div>
                     <div className={styles.button}>
                         <button><strong>Comprar ahora</strong></button>
                     </div>
