@@ -1,0 +1,51 @@
+$grey:#c7c7c7;
+$yellow: #f3f300;
+$shadow: rgba(0,0,0,.1);
+  
+.searchBox {
+    background-color: $yellow;
+    height: 6%;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+  
+.navLogo {
+    position: absolute;
+    top: 1.5rem;
+    left: 1%;
+}
+
+.navInput {
+    outline: none;
+    border: none;
+    box-shadow: 0 1px 2px 0 $shadow;
+    height: 3.5rem;
+    width: 50%;
+    margin: auto;
+    padding-left: 10px;
+    &::placeholder {
+        color:$grey;
+    }
+}
+
+
+.stretch {
+    flex: 1;
+}
+
+.form {
+    width:100%
+}
+
+.navButton {
+    outline: none;
+    background: white;
+    height: 3.5rem;
+    width: 3.5rem;
+    border: none;
+    box-shadow: 0 1px 2px 0 $shadow;
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import {useRouter} from 'next/router';
-import styles from '../styles/ProductMiniature.module.css';
 
 const ProductMiniature = ({ item }) => {
     const router = useRouter();
@@ -10,11 +9,11 @@ const ProductMiniature = ({ item }) => {
     }
 
     return (
-        <div className={styles.product} onClick={handleOnClick}>
-            <img className={styles.productImage} height='auto' width='100px' src={item.picture}></img>
-            <div className={styles.productDesc}>
+        <div className='product' onClick={handleOnClick}>
+            <img className='productImage' height='auto' width='100px' src={item.picture}></img>
+            <div className='productDesc'>
                 <p>{item.title}</p>
-                <span className={styles.amount}>$ {item.price.amount}</span>
+                <span className='amount'>$ {item.price.amount}</span>
             </div>
         </div>
     )

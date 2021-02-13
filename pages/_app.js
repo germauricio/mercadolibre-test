@@ -1,6 +1,9 @@
-import '../styles/SearchBox.module.css';
-import '../styles/globals.css';
+import '../styles/css/main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/css/productDetail.css';
+import '../styles/css/productMiniature.css';
+import '../styles/css/searchBox.css';
+
 import Head from 'next/head';
 function MyApp({ Component, pageProps }) {
   return (

@@ -1,0 +1,116 @@
+.productContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+}
+@media (max-width: 940px) {
+  .productContainer {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+}
+
+.price {
+  padding-top: 3rem;
+}
+
+.leftColumn {
+  width: 60%;
+  position: relative;
+  text-align: center;
+  padding-top: 6rem;
+}
+@media (max-width: 940px) {
+  .leftColumn {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+.leftColumn img {
+  height: 100%;
+}
+@media (max-width: 940px) {
+  .leftColumn img {
+    right: 0;
+    width: 220px;
+    left: initial;
+  }
+}
+@media (max-width: 535px) {
+  .leftColumn img {
+    width: 220px;
+  }
+}
+
+.rightColumn {
+  width: 40%;
+  margin-top: 60px;
+}
+@media (max-width: 940px) {
+  .rightColumn {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+
+.buyButton {
+  padding-top: 3rem;
+}
+@media (max-width: 940px) {
+  .buyButton {
+    text-align: center;
+  }
+}
+.buyButton button {
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: #678afa;
+  height: 4rem;
+  width: 15rem;
+  transition: background 0.2s ease-in;
+}
+.buyButton button:hover {
+  background: #476adc;
+}
+@media (max-width: 940px) {
+  .buyButton button {
+    width: 70%;
+  }
+}
+
+.description {
+  width: 60%;
+  margin: 10rem;
+}
+@media (max-width: 940px) {
+  .description {
+    all: unset;
+  }
+}
+.description p {
+  white-space: pre-line;
+}
+@media (max-width: 940px) {
+  .description p {
+    margin: 3rem;
+  }
+}
+@media (max-width: 940px) {
+  .description h3 {
+    margin: 3rem;
+  }
+}
+
+.priceDecimals {
+  vertical-align: top;
+  font-size: 2rem;
+}
+
+.priceAmount {
+  font-size: 4rem;
+}
+
+/*# sourceMappingURL=productDetail.css.map */

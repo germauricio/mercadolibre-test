@@ -1,0 +1,101 @@
+$darkBlue: rgb(71, 106, 220);
+$blue: rgb(103, 138, 250);
+
+@mixin width100padding0() {
+    width: 100%;
+    padding-top: 0;
+}
+
+.productContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    @media (max-width: 940px) {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+}
+
+.price {
+    padding-top: 3rem;
+}
+.leftColumn {
+    width: 60%;
+    position: relative;
+    text-align: center;
+    padding-top: 6rem;
+    @media (max-width: 940px) {
+        @include width100padding0();
+    }
+    img {
+        height:100%;
+        @media (max-width: 940px) {
+            right: 0;
+            width: 220px;
+            left: initial;
+        }
+        @media (max-width: 535px) {
+            width: 220px;
+        }
+    }
+}
+   
+.rightColumn {
+    width: 40%;
+    margin-top: 60px;
+    @media (max-width: 940px) {
+        @include width100padding0();
+    }
+}
+
+.buyButton {
+    padding-top:3rem;
+    @media (max-width: 940px) {
+        text-align: center;
+    }
+    button {
+        color: rgb(255, 255, 255);
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        background: $blue;
+        height: 4rem;
+        width: 15rem;
+        transition: background 0.2s ease-in;
+        &:hover {
+            background: $darkBlue;
+        }
+        @media (max-width: 940px) {
+            width: 70%;
+        }
+    }
+}
+
+.description {
+    width:60%;
+    margin: 10rem;
+    @media (max-width: 940px) {
+        all:unset;
+    }
+    p {
+        white-space: pre-line;
+        @media (max-width: 940px) {
+            margin: 3rem;
+        }
+    }
+    h3 {
+        @media (max-width: 940px) {
+            margin: 3rem;
+        }
+    }
+}
+
+.priceDecimals {
+    vertical-align: top;
+    font-size:2rem;
+}
+
+.priceAmount {
+    font-size:4rem;
+}

@@ -1,10 +1,3 @@
-.container {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .searchBox {
   background-color: #f3f300;
   height: 6%;
@@ -25,15 +18,14 @@
 .navInput {
   outline: none;
   border: none;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   height: 3.5rem;
   width: 50%;
   margin: auto;
   padding-left: 10px;
 }
-
 .navInput::placeholder {
-  color:#c7c7c7;
+  color: #c7c7c7;
 }
 
 .stretch {
@@ -41,7 +33,7 @@
 }
 
 .form {
-  width:100%
+  width: 100%;
 }
 
 .navButton {
@@ -50,5 +42,7 @@
   height: 3.5rem;
   width: 3.5rem;
   border: none;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
+
+/*# sourceMappingURL=searchBox.css.map */
