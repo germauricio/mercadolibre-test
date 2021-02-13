@@ -12,13 +12,14 @@ exports.index = (req, res) => {
           resp.data.results.forEach((result, index) => {
             if(index < 4){
               categories.push(result.category_id);
+              const decimals =  result.price - Math.floor(result.price);
               items.push({
                 id: result.id,
                 title: result.title,
                 price: { 
                   currency: result.currency_id, 
                   amount: result.price, 
-                  decimals: result.price,
+                  decimals: Number.parseFloat(decimals.toFixed(2))
                 },
                 picture: result.thumbnail, 
                 condition: result.condition, 
@@ -62,6 +63,14 @@ exports.show = async (req, res) => {
 
   try {
     product = await axios.get(`${process.env.API_MELI}/items/`+ id);
+
+    let decimals =  product.data.price - Math.floor(product.data.price);
+    decimals = parseFloat(decimals.toFixed(2));
+
+    if(decimals != 0) {
+      decimals = parseInt(decimals.toString().substring(2));
+    }
+
     const response = {
       author: {
         name: 'Mauricio',
@@ -73,7 +82,7 @@ exports.show = async (req, res) => {
         price: { 
           currency: product.data.currency_id, 
           amount: product.data.price, 
-          decimals: product.data.price,
+          decimals: decimals
         }, 
         picture: product.data.thumbnail, 
         condition: product.data.condition, 
