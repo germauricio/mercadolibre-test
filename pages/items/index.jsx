@@ -10,9 +10,9 @@ const SearchResult = () => {
     const [isLoading, setLoading] = useState(false);
 
     useEffect(() => {
+        setLoading(true);
         (async () => {
             if(router.query.search){
-                setLoading(true);
                 getItems(router.query.search)
                     .then((res) => {
                         setItems(res);
@@ -30,7 +30,7 @@ const SearchResult = () => {
                 <img src="/loading.gif" height="200px" className="loading" alt="loading"/>
             </div>
             ) : (
-                items.length ? (
+                items.length && items != null ? (
                     items.map( (item) => {
                         return(
                             <ProductMiniature item={item}/>

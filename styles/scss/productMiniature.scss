@@ -1,4 +1,5 @@
 $shadow:rgba(0,0,0,.1);
+$green:rgb(84, 186, 118);
 .product {
     display: flex;
     padding-left: 1.5rem;
@@ -19,4 +20,8 @@ $shadow:rgba(0,0,0,.1);
 
 .amount {
     font-size: 2.5rem;
+}
+
+.shipment {
+    color: $green;
 }

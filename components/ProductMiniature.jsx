@@ -13,7 +13,10 @@ const ProductMiniature = ({ item }) => {
             <img className='productImage' height='auto' width='100px' src={item.picture}></img>
             <div className='productDesc'>
                 <p>{item.title}</p>
-                <span className='amount'>$ {item.price.amount}</span>
+                <h4 className='amount'>$ {item.price.amount}</h4>
+                { item.free_shipping && (
+                    <span className='shipment'>Envío gratis</span>
+                )}
             </div>
         </div>
     )
