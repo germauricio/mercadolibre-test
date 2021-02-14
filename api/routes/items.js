@@ -1,4 +1,4 @@
-const router = require('express').Router();
+const router = require('express').Router();// eslint-disable-line
 const itemsController = require('../controllers/itemsController');
 
 router.get('/', itemsController.index);
