@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect} from 'react';
 import ProductDetail from '../../components/ProductDetail';
 import {useRouter} from 'next/router';
 import {getItem} from '../../services/itemService';

@@ -24,12 +24,18 @@ const SearchBox = ({value}) => {
                 <div className='stretch'>
                     <input 
                     className='navInput' 
-                    value={search} 
+                    value={search || ''} 
                     onChange = {(event) => setSearch(event.target.value)} 
                     type="text"
+                    data-testid="searchInput"
                     placeholder="Buscar productos, marcas y más..."
                     />
-                    <button className='navButton' type="submit"><img className="pb-1" height="15px" src="/search.png"></img></button>
+                    <button 
+                    className='navButton'
+                    type="submit"
+                    data-testid="searchButton">
+                        <img className="pb-1" height="15px" src="/search.png"></img>
+                    </button>
                 </div>
             </form>
         </div>

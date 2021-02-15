@@ -5,6 +5,7 @@ import '../styles/css/productMiniature.css';
 import '../styles/css/searchBox.css';
 import React from 'react';
 import Head from 'next/head';
+
 function MyApp({Component, pageProps}) { // eslint-disable-line
   return (
     <div>
