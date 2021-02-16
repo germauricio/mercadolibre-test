@@ -12,11 +12,11 @@ jobs:
       - run:
           name: Run tests 
           command: |
-          npm run test
+            npm run test
       - run:
           name: Run lint 
           command: |
-          eslint .
+            eslint .
 workflows:
   version: 2
   build-and-test:
