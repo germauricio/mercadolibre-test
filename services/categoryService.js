@@ -1,8 +1,9 @@
+/* eslint-disable require-jsdoc */
 import axios from '../lib/axios.js';
 
 export const getCategories = (categories) =>
   new Promise((resolve, reject) => {
-    const category = mode(categories);
+    const category = mostOcurrenciesElement(categories);
     axios.get(`/api/categories/${category}`)
         .then((res) => {
           resolve(res.data);
@@ -31,7 +32,7 @@ export const getItemCategory = (itemId) =>
         });
   });
 
-function mode(array) {
+function mostOcurrenciesElement(array) {
   if (array.length == 0) {
     return null;
   }
