@@ -13,9 +13,19 @@ const BreadCrumb = ({categories}) => {
             { categories && (
                 categories.parentCategories.map( (category, i) => {
                     if(categories.parentCategories[i + 1]) {
-                        return <span onClick={() => handleClick(category.name)}>{category.name}  {'>'}  </span>
+                        return <span 
+                                onClick={() => handleClick(category.name)}
+                                data-testid='category'
+                                key={category.name}
+                                >
+                                    {category.name}  {'>'}  
+                                </span>
                     }
-                    return <span onClick={() => handleClick(category.name)}>{category.name}</span>
+                    return <span
+                            key={category.name}
+                            onClick={() => handleClick(category.name)}>
+                                {category.name}
+                            </span>
                 })
             )}
         </div>

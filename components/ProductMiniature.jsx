@@ -9,7 +9,7 @@ const ProductMiniature = ({ item }) => {
     }
 
     return (
-        <div className='product' onClick={handleOnClick}>
+        <div data-testid='product' className='product' onClick={handleOnClick}>
             <img className='productImage' height='auto' width='100px' src={item.picture}></img>
             <div className='productDesc'>
                 <p>{item.title}</p>
