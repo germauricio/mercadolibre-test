@@ -11,10 +11,11 @@ jobs:
           command: |
             npm install
             sudo npm install -g eslint
+            sudo npm install -g jest
       - run:
           name: Run tests 
           command: |
-            npm run test
+            jest
       - run:
           name: Run lint 
           command: |
