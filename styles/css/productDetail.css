@@ -91,6 +91,8 @@
   }
 }
 .description p {
+  white-space: nowrap;
+  overflow: hidden;
   white-space: pre-line;
 }
 @media (max-width: 940px) {

@@ -79,6 +79,8 @@ $blue: rgb(103, 138, 250);
         all:unset;
     }
     p {
+        white-space: nowrap;
+        overflow: hidden;
         white-space: pre-line;
         @media (max-width: 940px) {
             margin: 3rem;
