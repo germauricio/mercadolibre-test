@@ -69,7 +69,7 @@ Site: http://challenge-pauluk-mercadolibre.herokuapp.com/
 - Sass
 - Jest
 
-## Api documentation
+## Api documentation 📄
 
 ### /api/items/:itemId
 
