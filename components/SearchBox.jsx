@@ -7,7 +7,7 @@ const SearchBox = ({value}) => {
 
     useEffect(() => {
         const script = document.createElement("script");
-        script.type = "text/javascript"; mf.defer = true;
+        script.type = "text/javascript";
         script.async = true;
         script.src = "//cdn.mouseflow.com/projects/f4db0a84-36b1-41db-9be8-65cae3133c25.js";
         document.body.appendChild(script);
