@@ -1,6 +1,7 @@
 import '../styles/css/main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/css/productDetail.css';
+import '../styles/css/breadCrumb.css';
 import '../styles/css/productMiniature.css';
 import '../styles/css/searchBox.css';
 import React from 'react';

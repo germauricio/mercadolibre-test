@@ -28,7 +28,7 @@ const SearchBox = ({value}) => {
                     onChange = {(event) => setSearch(event.target.value)} 
                     type="text"
                     data-testid="searchInput"
-                    placeholder="Buscar productos, marcas y más..."
+                    placeholder="Buscar..."
                     />
                     <button 
                     className='navButton'

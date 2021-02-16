@@ -6,7 +6,7 @@ export const getItems = (query) =>
 
     axios.get(`/api/items?q=${search}`)
         .then((res) => {
-          resolve(res.data.items);
+          resolve(res.data);
         })
         .catch((err) => {
           if (err.response && err.response.data && err.response.data.message) {
