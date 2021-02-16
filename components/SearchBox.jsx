@@ -1,10 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useRouter} from 'next/router';
 
 const SearchBox = ({value}) => {
     const router = useRouter();
     const [search, setSearch] = useState(value);
 
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.type = "text/javascript"; mf.defer = true;
+        script.async = true;
+        script.src = "//cdn.mouseflow.com/projects/f4db0a84-36b1-41db-9be8-65cae3133c25.js";
+        document.body.appendChild(script);
+    }, [])
 
     const handleSubmit = async (event) => {
         event.preventDefault();
