@@ -20,7 +20,7 @@
   border: none;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   height: 3.5rem;
-  width: 50%;
+  width: 40%;
   margin: auto;
   padding-left: 10px;
 }
@@ -43,6 +43,7 @@
   width: 3.5rem;
   border: none;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  vertical-align: top;
 }
 
 /*# sourceMappingURL=searchBox.css.map */

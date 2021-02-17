@@ -24,7 +24,7 @@ $shadow: rgba(0,0,0,.1);
     border: none;
     box-shadow: 0 1px 2px 0 $shadow;
     height: 3.5rem;
-    width: 50%;
+    width: 40%;
     margin: auto;
     padding-left: 10px;
     &::placeholder {
@@ -43,8 +43,9 @@ $shadow: rgba(0,0,0,.1);
 .navButton {
     outline: none;
     background: white;
-    height: 3.5rem;
+    height: 3.50rem;
     width: 3.5rem;
     border: none;
     box-shadow: 0 1px 2px 0 $shadow;
+    vertical-align: top;
 }

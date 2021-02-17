@@ -33,7 +33,7 @@ const SearchBox = ({value}) => {
                     className='navButton'
                     type="submit"
                     data-testid="searchButton">
-                        <img className="pb-1" height="15px" src="/search.png"></img>
+                        <img height="15px" src="/search.png"></img>
                     </button>
                 </div>
             </form>
