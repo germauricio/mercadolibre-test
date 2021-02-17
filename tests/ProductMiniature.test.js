@@ -20,7 +20,6 @@ const item = {
 describe('ProductMiniature', () => {
   it('renders without crashing', () => {
     render(<ProductMiniature item={item} />);
-    console.log(screen);
     expect(
         screen.getByTestId('product'),
     ).toBeInTheDocument();
