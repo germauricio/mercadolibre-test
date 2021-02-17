@@ -7,6 +7,10 @@ exports.show = async (req, res) => {
         `${process.env.API_MELI}/categories/`+ id,
     );
     const categories = {
+      author: {
+        name: 'Mauricio',
+        lastname: 'Pauluk'
+      },
       parentCategories: response.data.path_from_root,
     };
     res.json(categories);
@@ -21,7 +25,14 @@ exports.getItemCategory = async (req, res) => {
     const response = await axios.get(
         `${process.env.API_MELI}/items/`+ id,
     );
-    res.json(response.data.category_id);
+    const category_id = {
+      author: {
+        name: 'Mauricio',
+        lastname: 'Pauluk'
+      },
+      category_id: response.data.category_id
+    }
+    res.json(category_id);
   } catch (error) {
     res.json(error.message);
   }

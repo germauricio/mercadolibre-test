@@ -11,8 +11,8 @@ const BreadCrumb = ({categories}) => {
     return (
         <div className="breadCrumb">
             { categories && (
-                categories.parentCategories.map( (category, i) => {
-                    if(categories.parentCategories[i + 1]) {
+                categories.map( (category, i) => {
+                    if(categories[i + 1]) {
                         return <span 
                                 onClick={() => handleClick(category.name)}
                                 data-testid='category'

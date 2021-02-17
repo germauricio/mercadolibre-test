@@ -6,7 +6,7 @@ export const getCategories = (categories) =>
     const category = mostOcurrenciesElement(categories);
     axios.get(`/api/categories/${category}`)
         .then((res) => {
-          resolve(res.data);
+          resolve(res.data.parentCategories);
         })
         .catch((err) => {
           if (err.response && err.response.data && err.response.data.message) {
@@ -21,7 +21,7 @@ export const getItemCategory = (itemId) =>
   new Promise((resolve, reject) => {
     axios.get(`/api/categories/item/${itemId}`)
         .then((res) => {
-          resolve(res.data);
+          resolve(res.data.category_id);
         })
         .catch((err) => {
           if (err.response && err.response.data && err.response.data.message) {
