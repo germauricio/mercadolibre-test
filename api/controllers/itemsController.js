@@ -2,8 +2,8 @@ const axios = require('axios');
 
 exports.index = (req, res) => {
   const search = req.query.q;
-  if(!search){
-    res.status(400).json("Query key 'q' not found");
+  if (!search) {
+    res.status(400).json('Query key \'q\' not found');
     return;
   }
   axios({
