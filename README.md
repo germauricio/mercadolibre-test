@@ -103,7 +103,7 @@ Site: http://challenge-pauluk-mercadolibre.herokuapp.com/
     }
 }
 ```
-### /api/items?search={search}
+### /api/items?q=:search
 
 - Returns formated item list
 
