@@ -18,8 +18,10 @@ const SearchResult = () => {
             if(router.query.search){
                 const items = await getItems(router.query.search);
                 setItems(items.items);
-                const categoryWithChildren = await getCategories(items.categories);
-                setCategories(categoryWithChildren);
+                if(items.length){
+                    const categoryWithChildren = await getCategories(items.categories);
+                    setCategories(categoryWithChildren);
+                }
                 setLoading(false);
             }
         })()
@@ -31,7 +33,7 @@ const SearchResult = () => {
             { categories && !isLoading && (
                 <BreadCrumb categories={categories}/>
             )}
-            {isLoading || items == '' ? (
+            {isLoading || items === '' ? (
                 <div className="container">
                     <img src="/loading.gif" height="200px" className="loading" alt="loading"/>
                 </div>

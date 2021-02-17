@@ -16,11 +16,13 @@ const ProductView = () => {
         setLoading(true);
         (async () => {
             if(router.query.productId){
-                const item = await getItem(router.query.productId)
+                const item = await getItem(router.query.productId);
                 setItem(item);
-                const itemCategory = await getItemCategory(item.id);
-                const categories = await getCategories([itemCategory]);
-                setCategories(categories);
+                if(item){
+                    const itemCategory = await getItemCategory(item.id);
+                    const categories = await getCategories([itemCategory]);
+                    setCategories(categories);
+                }
                 setLoading(false);
             }
         })()
@@ -32,7 +34,7 @@ const ProductView = () => {
             { categories && !isLoading && (
                 <BreadCrumb categories={categories}/>
             )}
-            {isLoading || item == '' ? (
+            {isLoading || item === '' ? (
             <div className="container">
                 <img src="/loading.gif" height="200px" className="loading" alt="loading"/>
             </div>
