@@ -109,7 +109,7 @@ Site: http://challenge-pauluk-mercadolibre.herokuapp.com/
 
 > Example
 
-- Request: `/api/items?search=guitarra`
+- Request: `/api/items?q=guitarra`
 
 - Response: 
 
