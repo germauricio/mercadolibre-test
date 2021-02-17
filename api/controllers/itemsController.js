@@ -2,6 +2,10 @@ const axios = require('axios');
 
 exports.index = (req, res) => {
   const search = req.query.q;
+  if(!search){
+    res.status(400).json("Query key 'q' not found");
+    return;
+  }
   axios({
     url: `${process.env.API_MELI}/sites/MLA/search?q=` + search,
     method: 'get',
