@@ -30,3 +30,11 @@ a {
     padding-top:50%;
   }
 }
+
+.notFoundContainer {
+  text-align: center;
+  padding-top:20%;
+  @media (max-width: 535px) {
+    padding-top:70%;
+  }
+}

@@ -3,6 +3,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-family: "Lato", sans-serif;
 }
 
 a {
@@ -28,6 +29,16 @@ a {
 @media (max-width: 535px) {
   .container {
     padding-top: 50%;
+  }
+}
+
+.notFoundContainer {
+  text-align: center;
+  padding-top: 20%;
+}
+@media (max-width: 535px) {
+  .notFoundContainer {
+    padding-top: 70%;
   }
 }
 

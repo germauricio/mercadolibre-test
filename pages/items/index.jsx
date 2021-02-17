@@ -18,7 +18,7 @@ const SearchResult = () => {
             if(router.query.search){
                 const items = await getItems(router.query.search);
                 setItems(items.items);
-                if(items.length){
+                if(items){
                     const categoryWithChildren = await getCategories(items.categories);
                     setCategories(categoryWithChildren);
                 }
@@ -45,7 +45,7 @@ const SearchResult = () => {
                                 )
                             }) 
                     ) : (
-                                <div className="container">
+                        <div className="notFoundContainer">
                             <p>No encontramos resultados para tu busqueda</p>
                         </div>
                     )

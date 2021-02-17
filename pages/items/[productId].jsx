@@ -42,7 +42,7 @@ const ProductView = () => {
                 item ? (
                     <ProductDetail item={item}/>
                 ) : (
-                    <div className="container">
+                    <div className="notFoundContainer">
                         <p>No encontramos resultados para tu busqueda</p>
                     </div>
                 )
