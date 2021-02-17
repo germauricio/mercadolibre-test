@@ -9,7 +9,7 @@ exports.show = async (req, res) => {
     const categories = {
       author: {
         name: 'Mauricio',
-        lastname: 'Pauluk'
+        lastname: 'Pauluk',
       },
       parentCategories: response.data.path_from_root,
     };
@@ -25,14 +25,14 @@ exports.getItemCategory = async (req, res) => {
     const response = await axios.get(
         `${process.env.API_MELI}/items/`+ id,
     );
-    const category_id = {
+    const categoryId = {
       author: {
         name: 'Mauricio',
-        lastname: 'Pauluk'
+        lastname: 'Pauluk',
       },
-      category_id: response.data.category_id
-    }
-    res.json(category_id);
+      category_id: response.data.category_id,
+    };
+    res.json(categoryId);
   } catch (error) {
     res.json(error.message);
   }

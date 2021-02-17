@@ -18,7 +18,7 @@ const BreadCrumb = ({categories}) => {
                                 data-testid='category'
                                 key={category.name}
                                 >
-                                    {category.name}  {'>'}  
+                                    {category.name} &nbsp; {'>'} &nbsp;
                                 </span>
                     }
                     return <span
