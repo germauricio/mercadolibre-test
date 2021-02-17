@@ -120,60 +120,112 @@ Site: http://challenge-pauluk-mercadolibre.herokuapp.com/
         "lastname": "Pauluk"
     },
     "categories": [
-        "MLA432000",
-        "MLA1645",
-        "MLA410989",
-        "MLA412445"
+        "MLA2989",
+        "MLA2989",
+        "MLA2989",
+        "MLA4274"
     ],
     "items": [
         {
-            "id": "MLA882097946",
-            "title": "Bolso Tote Bag Topman Original",
+            "id": "MLA698752044",
+            "title": "Guitarra Criolla Clasica Nuevas Calidad Con Funda Pua Manual",
             "price": {
                 "currency": "ARS",
-                "amount": 4995,
+                "amount": 6499,
                 "decimals": 0
             },
-            "picture": "http://http2.mlstatic.com/D_687000-MLA42653025055_072020-I.jpg",
-            "condition": "used",
-            "free_shipping": true
-        },
-        {
-            "id": "MLA766701304",
-            "title": "Ventilador De Pie 20  Bgh Bfsp20b18 100w ",
-            "price": {
-                "currency": "ARS",
-                "amount": 7999,
-                "decimals": 0
-            },
-            "picture": "http://http2.mlstatic.com/D_894320-MLA31024975757_062019-O.jpg",
+            "picture": "http://http2.mlstatic.com/D_694346-MLA31351983361_072019-O.jpg",
             "condition": "new",
             "free_shipping": true
         },
         {
-            "id": "MLA628978224",
-            "title": "Tensiometro  Aspen Aneroide  102 Con Estetoscopio",
+            "id": "MLA676545238",
+            "title": "Guitarra Criolla De Estudio Varios Colores Con Funda Oferta!",
             "price": {
                 "currency": "ARS",
-                "amount": 3699,
+                "amount": 5995,
                 "decimals": 0
             },
-            "picture": "http://http2.mlstatic.com/D_949091-MLA31116118382_062019-O.jpg",
+            "picture": "http://http2.mlstatic.com/D_732564-MLA43693464164_102020-O.jpg",
             "condition": "new",
             "free_shipping": true
         },
         {
-            "id": "MLA834199284",
-            "title": "A Notebook For The Best Undefined Ever. : Viki Notebook Pub",
+            "id": "MLA848015734",
+            "title": "Guitarra Criolla Clasica De Estudio Color Negra",
             "price": {
                 "currency": "ARS",
-                "amount": 3000,
+                "amount": 6079,
+                "decimals": 0.15
+            },
+            "picture": "http://http2.mlstatic.com/D_799526-MLA42562146808_072020-O.jpg",
+            "condition": "new",
+            "free_shipping": true
+        },
+        {
+            "id": "MLA803211819",
+            "title": "Guitarra Acustica Parquer Master Marron Con Corte Y Funda",
+            "price": {
+                "currency": "ARS",
+                "amount": 18066,
                 "decimals": 0
             },
-            "picture": "http://http2.mlstatic.com/D_842098-MLA40418261558_012020-I.jpg",
+            "picture": "http://http2.mlstatic.com/D_698989-MLA31913085794_082019-O.jpg",
             "condition": "new",
-            "free_shipping": false
+            "free_shipping": true
         }
     ]
 }
 ```
+### /api/categories/:itemCategory
+
+- Returns formated item parent categories
+
+> Example
+
+- Request: `/api/categories/MLA1055`
+
+- Response: 
+
+```
+{
+    "author": {
+        "name": "Mauricio",
+        "lastname": "Pauluk"
+    },
+    "parentCategories": [
+        {
+            "id": "MLA1051",
+            "name": "Celulares y Teléfonos"
+        },
+        {
+            "id": "MLA1055",
+            "name": "Celulares y Smartphones"
+        }
+    ]
+}
+```
+
+### /api/categories/item/:itemId
+
+- Returns formated item category
+
+> Example
+
+- Request: `/api/categories/item/MLA614113303`
+
+- Response: 
+
+```
+{
+    "author": {
+        "name": "Mauricio",
+        "lastname": "Pauluk"
+    },
+    "category_id": "MLA61201"
+}
+```
+
+I would really appreciate any commentary or suggestion about my resolution to the challenge!
+
+Thanks for reading!
