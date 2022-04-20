@@ -1,0 +1,1 @@
+{"ast":null,"code":"import axios from 'axios';\nvar axiosInstance = axios.create({\n  baseURL: process.env.APP_URL ? process.env.APP_URL : ''\n});\nexport default axiosInstance;","map":null,"metadata":{},"sourceType":"module"}

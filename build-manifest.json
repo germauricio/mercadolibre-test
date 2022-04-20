@@ -1,0 +1,52 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-144e5fa6fafab6397d9c.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/trLellVoB2VfWZq4LsR5h/_buildManifest.js",
+    "static/trLellVoB2VfWZq4LsR5h/_ssgManifest.js"
+  ],
+  "pages": {
+    "/": [
+      "static/chunks/main-bdf2da698985f00e9822.js",
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.9d524150d48315f49e80.js",
+      "static/chunks/commons.db101e4d1a005ec25d15.js",
+      "static/chunks/pages/index-9e6a659f281080d38457.js"
+    ],
+    "/_app": [
+      "static/chunks/main-bdf2da698985f00e9822.js",
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.9d524150d48315f49e80.js",
+      "static/chunks/commons.db101e4d1a005ec25d15.js",
+      "static/css/d1ff09b5002a8f8261bb.css",
+      "static/chunks/pages/_app-2338435119802743ab48.js"
+    ],
+    "/_error": [
+      "static/chunks/main-bdf2da698985f00e9822.js",
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.9d524150d48315f49e80.js",
+      "static/chunks/commons.db101e4d1a005ec25d15.js",
+      "static/chunks/pages/_error-a0287604e81faba1a06e.js"
+    ],
+    "/items": [
+      "static/chunks/main-bdf2da698985f00e9822.js",
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.9d524150d48315f49e80.js",
+      "static/chunks/commons.db101e4d1a005ec25d15.js",
+      "static/chunks/24d951f2b8bce907fde19d9d4527b399ce7c7396.1ae19f491c314b2cfe8f.js",
+      "static/chunks/pages/items-b760ae8397b392912eda.js"
+    ],
+    "/items/[productId]": [
+      "static/chunks/main-bdf2da698985f00e9822.js",
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.9d524150d48315f49e80.js",
+      "static/chunks/commons.db101e4d1a005ec25d15.js",
+      "static/chunks/24d951f2b8bce907fde19d9d4527b399ce7c7396.1ae19f491c314b2cfe8f.js",
+      "static/chunks/pages/items/[productId]-d336e27a678009a59708.js"
+    ]
+  },
+  "ampFirstPages": []
+}
